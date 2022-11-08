@@ -2,6 +2,7 @@ import sys
 import mariadb
 import pandas as pd
 
+
 # mariaDB 연결
 def mariaDbConnection(u, pw, h, p, d):
     try:
@@ -23,7 +24,7 @@ def mariaDbClose(c):
         sys.exit(1)
 
 
-dbConn = mariaDbConnection('root', '1234', "localhost", 3306, 'library')
+dbConn = mariaDbConnection('root', '1234', "localhost", 3306, 'dbdb')
 cur = dbConn.cursor()
 
 data = pd.read_excel("lib.xlsx")
