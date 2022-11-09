@@ -29,7 +29,7 @@ cur = dbConn.cursor()
 
 data = pd.read_excel("lib.xlsx")
 
-sql = "INSERT INTO libraryList (LibName,Address,Tel,Fax,Latitude,Longitude,Homepage,Closed,OperatingTime,LibCode) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+sql = "INSERT INTO tb_library_list (libname,address,tel,fax,latitude,longitude,homepage,closed,operatingtime,libcode) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 for i in range(len(data)):
     cur.execute(sql, tuple(data.values[i]))
 
